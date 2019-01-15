@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>MusicPullData</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			::-ms-clear {
+				display: none;
+			}
+			
+			::-ms-reveal {
+				display: none;
+			}
+			
+			body {
+				font-family: 微软雅黑;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.login-area {
+				margin: 0 auto;
+				width: 430px;
+				height: 450px;
+				margin-top: 50px;
+			}
+			
+			.login-area .common {
+				font-family: 微软雅黑;
+				position: relative;
+			}
+			
+			.login-area .input {
+				top: 100px;
+				height: 35px;
+				width: 70%;
+				padding: 5px 5px 5px 10px;
+				margin: 0 12%;
+				font-size: 14px;
+				border: 1px solid #d2d2d2;
+				outline: none;
+			}
+			
+			.login-area .input_on {
+				border-color: #00BBFF;
+			}
+			
+			.login-area .psw-height {
+				top: 110px;
+			}
+			
+			.login-area .login-btn {
+				top: 170px;
+				left: 60px;
+				background: #3090e7;
+				border: none;
+				width: 300px;
+				height: 50px;
+				color: #fff;
+				font-size: 1em;
+			}
+			
+			.login-area .title {
+				font-family: 微软雅黑;
+				color: #3090e7;
+				position: relative;
+				top: 70px;
+				font-size: 1.4em;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.login-area .title span {
+				border-bottom: 1px solid #3090e7;
+				width: 40px;
+				height: 0;
+				display: inline-block;
+				margin: 0 10px 5px;
+			}
+			
+			#jianpan {
+				position: absolute;
+				background: #ffffff;
+				border-radius: 5px;
+				bottom: 50px;
+				right: 50px;
+				z-index: 9999;
+				width: 45%;
+				height: 30%;
+				display: none;
+				overflow: hidden;
+				border: 1px solid rgba(0, 0, 0, 0.5);
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			
+			#jianpan .title {
+				width: 100%;
+				height: 20%;
+				border-bottom: 1px solid #dcdddd;
+				padding: 0;
+				cursor: move;
+				font-size: 1em;
+			}
+			
+			#jianpan .jianpan_hide {
+				width: 40px;
+				float: right;
+			}
+			
+			#xfjp {
+				width: 100%;
+				height: 80%;
+			}
+			
+			#shift {
+				font-size: 0.8em;
+			}
+			
+			.jianpan {
+				color: #dcdddd;
+			}
+			
+			.jianpan td {
+				color: #333333;
+				width: 10%;
+				text-align: center;
+				font-size: 1em;
+				border-bottom: 1px solid #dcdddd;
+				border-left: 1px solid #dcdddd;
+			}
+			
+			.jianpan tr td:first-child {
+				border-left: none;
+			}
+			
+			.jianpan tr:last-child td {
+				border-bottom: none;
+			}
+			
+			.jianpan td:active {
+				/*background: #efeff0;*/
+				-moz-box-shadow: 0px 0px 10px #AAAAAA inset;
+				-webkit-box-shadow: 0px 0px 10px #AAAAAA inset;
+				box-shadow: 0px 0px 10px #AAAAAA inset;
+			}
+			/* 加载动画  start */
+			#center {
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  margin-top: -180px;
+			  margin-left: -150px;
+			  width: 300px;
+			  height: 80px;
+			  font-family: "Lato", sans-serif;
+			  font-weight: 600;
+			  font-size: 16px;
+			  color: #02aff1;
+			  text-align: center;
+			  -webkit-font-smoothing: antialiased;
+			}
+			
+			.skype-loader {
+			  width: 80px;
+			  height: 80px;
+			  position: relative;
+			  margin: auto;
+			  margin-top: 60px;
+			  margin-bottom: 70px;
+			}
+			
+			.skype-loader .dot {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 80px;
+			  height: 80px;
+			
+			  animation: 1.7s dotrotate cubic-bezier(0.775, 0.005, 0.310, 1.000) infinite;
+			}
+			
+			.skype-loader .dot:nth-child(1) {
+			  animation-delay: 0.2s;
+			}
+			
+			.skype-loader .dot:nth-child(2) {
+			  animation-delay: 0.35s;
+			}
+			
+			.skype-loader .dot:nth-child(3) {
+			  animation-delay: 0.45s;
+			}
+			
+			.skype-loader .dot:nth-child(4) {
+			  animation-delay: 0.55s;
+			}
+			
+			.skype-loader .dot:after, .skype-loader .dot .first {
+			  content: "";
+			  position: absolute;
+			  width: 8px;
+			  height: 8px;
+			  background: #02aff1;
+			  border-radius: 50%;
+			  left: 50%;
+			  margin-left: -4px;
+			}
+			
+			.skype-loader .dot .first {
+			  background: #02aff10;
+			  margin-top: -4px;
+			  animation: 1.7s dotscale cubic-bezier(0.775, 0.005, 0.310, 1.000) infinite;
+			  animation-delay: 0.2s;
+			}
+			
+			@keyframes dotrotate { 
+			  from { transform: rotate(0deg); } 
+			  to { transform: rotate(360deg); }
+			}
+			
+			@keyframes dotscale { 
+			  0%, 10% { width: 16px; height: 16px; margin-left: -8px;  margin-top: -4px; } 
+			  50% { width: 8px; height: 8px; margin-left: -4px; margin-top: 0; }
+			  90%, 100% { width: 16px; height: 16px;  margin-left: -8px;  margin-top: -4px; }
+			}
+			/* 加载动画  end */
+		</style>
+		<script src="http://127.0.0.1:8089/DeerDreamMusic/DeerDreamMusic-View/js/jquery.min.js"></script>
+		
+	</head>
+
+	<body>
+		<!-- 登录DIV   start   -->
+		<div class="login-area">
+			<div class="title">
+				<span></span>拉取音乐平台数据<span></span>
+			</div>
+			<label for="">
+			    <input id="singerName" type="text" placeholder="歌手、歌名或专辑" class="common input" name="username" onFocus="xfjianpan(this.id)" value=""/>
+			</label>
+			<span id="spanArea" style="color:#02aff1;position: absolute;top:190px;"></span><br />
+			<button class="common login-btn" id = "singnameBut" onclick="pulldata()">确认拉取</button>
+			<span id="checkSuf" style="color:#02aff1;position: absolute;top:240px;left:800px;"></span>
+		</div>
+		<!-- 登录DIV   end   -->
+		<div id="center" style="display:none;">
+		  <div class="skype-loader">
+		    <div class="dot">
+		      <div class="first"></div>
+		    </div>
+		    <div class="dot"></div>
+		    <div class="dot"></div>
+		    <div class="dot"></div>
+		  </div>
+		  <span id = "loadings"></span>
+		</div>
+		<!-- 键盘DIV   start   -->
+		<div id="jianpan">
+			<div class="title" style="text-align:center;"><span id="jptitle"></span><span class="jianpan_hide" onClick="xfjianpan(false)">×</span></div>
+			<table id="xfjp" class="jianpan" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>q</td>
+					<td>w</td>
+					<td>e</td>
+					<td>r</td>
+					<td>t</td>
+					<td>y</td>
+					<td>u</td>
+					<td>i</td>
+					<td>o</td>
+					<td>p</td>
+				</tr>
+				<tr>
+					<td>a</td>
+					<td>s</td>
+					<td>d</td>
+					<td>f</td>
+					<td>g</td>
+					<td>h</td>
+					<td>j</td>
+					<td>k</td>
+					<td>l</td>
+					<td>空格</td>
+				</tr>
+				<tr>
+					<td id="shift">shift</td>
+					<td>z</td>
+					<td>x</td>
+					<td>c</td>
+					<td>v</td>
+					<td>b</td>
+					<td>n</td>
+					<td>m</td>
+					<td colspan="2">清空</td>
+				</tr>
+			</table>
+		</div>
+		<!-- 键盘DIV   end   -->
+		
+		<script>
+			/*拉取数据*/
+			function pulldata() {
+				var singname = document.getElementById("singerName").value;
+				if (singname == ''|| singname == null) {
+					document.getElementById("spanArea").innerHTML = '(请输入歌名或专辑名)';
+				}else {
+					$("#singnameBut").hide();
+					$("#center").css("display","block");
+					document.getElementById("loadings").innerHTML = '正在拉取['+singname+']音乐数据';
+					 $.ajax({
+						type : "GET",
+				        url: 'http://127.0.0.1:8089/DeerDreamMusic/pullData/qqmusic',
+				        data: {
+						"keywork": singname	// 关键字
+						},
+						contentType : "application/json",
+						success : function(jsonData) {
+							window.parent.location.reload(true);
+							/* document.getElementById("checkSuf").innerHTML = jsonData;
+							$("#singnameBut").show();
+							$("#center").css("display","none"); */
+							alert(jsonData);
+						}
+					}); 
+				}
+			}
+			//键盘部分JS
+			$("#jianpan .title").css("line-height", $("#jianpan").height() / 5 + "px");
+
+			function xfjianpan(id) {
+				document.getElementById("spanArea").innerHTML = '';
+				//xfjianpan(id),当id为input的id，如果id==false时，键盘隐藏
+
+				var jpnub = $("#xfjp td").length;
+
+				move("jianpan"); //开启键盘可移动
+
+				$("#xfjp td").unbind("click");
+
+				if(id != false) {
+					$("#jianpan").show();
+					var xfjp_text = $("#" + id).val(); //获取input框当前的val值
+
+					$(".input_on").removeClass("input_on");
+					$("#" + id).addClass("input_on"); //设置input框选中时的样式
+
+					$("#jptitle").html($("#" + id).attr("placeholder")); //键盘标题，自动获取input的placeholder值
+
+					$("#xfjp td").click(function() {
+						var click = $(this).html(); //获取点击按键的内容
+
+						//特殊按键在这添加事件
+						//判断点击的按键是否有特殊事件，如果没有则按键内容加在input文本后面
+						if(click == "清空") {
+							xfjp_text = "";
+							$("#" + id).val(xfjp_text);
+						} else if(click == "shift") {
+							for(i = 0; i < jpnub; i++) {
+								$("#xfjp td:eq(" + i + ")").html($("#xfjp td:eq(" + i + ")").html().toUpperCase());
+							}
+						} else if(click == "SHIFT") {
+							for(i = 0; i < jpnub; i++) {
+								$("#xfjp td:eq(" + i + ")").html($("#xfjp td:eq(" + i + ")").html().toLowerCase());
+							}
+						} else if(click == "空格") {
+							xfjp_text = xfjp_text + " ";
+							$("#" + id).val(xfjp_text);
+						} else {
+							xfjp_text = xfjp_text + click;
+							$("#" + id).val(xfjp_text);
+						}
+
+						$("#" + id).focus();
+					})
+				} else {
+					$(".input_on").removeClass("input_on"); //移除选中input的选中样式
+					$("#jianpan").hide();
+				}
+			}
+
+			//鼠标按住拖动部分JS
+			function unmove(obj) {
+				$("#" + obj + " .title").unbind("mousedown");
+			}
+
+			function move(obj) {
+				var OffsetX = 0;
+				var OffsetY = 0;
+				var moveKg = false;
+				var csZ = 0;
+
+				function d(id) {
+					return document.getElementById(id);
+				}
+				$("#" + obj + " .title").bind("mousedown", function() {
+					OffsetX = event.pageX - d(obj).offsetLeft;
+					OffsetY = event.pageY - d(obj).offsetTop;
+					csZ = $("#" + obj).css("z-index");
+					$("#" + obj).css("z-index", "9999");
+					moveKg = true;
+					jpyd();
+				})
+
+				function jpyd() {
+					$(document).bind("mousemove", function() {
+						var e = e || window.event;
+						var mouswX = e.pageX;
+						var mouswY = e.pageY;
+						var moveX = mouswX - OffsetX;
+						var moveY = mouswY - OffsetY;
+						var maxX = $(window).width() - d(obj).offsetWidth;
+						var maxY = $(window).height() - d(obj).offsetHeight;
+						moveX = Math.min(maxX, Math.max(0, moveX));
+						moveY = Math.min(maxY, Math.max(0, moveY));
+						$("#" + obj).css({
+							"left": moveX,
+							"top": moveY
+						});
+					})
+					$(document).bind("mouseup", function() {
+						moveKg = false;
+						$("#" + obj).css("z-index", csZ);
+						$(document).unbind("mousemove mouseup");
+					})
+				}
+			}
+		</script>
+		
+	</body>
+
+</html>

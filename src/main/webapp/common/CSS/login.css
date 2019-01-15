@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+.main{ position:relative; }
+.main .bg{ width: 100%; }
+.loginbox .rt{ position:absolute; top:0; right:0; z-index: 1; background-color: #fe9900; color:#fff; width: 192px; line-height: 60px; text-align: center; font-size: 20px; }
+.loginbox .lt{ position:absolute; top:0; left:0; z-index: 1; background-color: #fe9900; color:#fff; width: 192px; line-height: 60px; text-align: center; font-size: 20px; }
+.loginbox .pt{ position:absolute; bottom: 0; right: 50px; z-index: 1; }
+.loginbox{ position:absolute; top:30px; z-index: 1; width: 1200px; }
+/* .loginbox .row,.logo{ width: 740px; padding:20px 30px; margin: 0 auto; } */
+.loginbox .row,.logo{  margin: 0 auto; }
+.loginbox .row{ background-color:#fff; border:1px solid #61989f; box-shadow: 0 0 5px #333; }
+.loginbox .tabtop{ height: 60px; }
+.loginbox .tabtop li{ width: 48.5%; float: left; font-size: 18px; text-align: center; cursor: pointer; line-height: 50px; border-bottom: 3px solid #ccc; color: #ccc; }
+.loginbox .tabtop li.active{ border-bottom-color: #4fc3a0; color: #4fc3a0; }
+.loginbox .tabtop li.left{ margin-right: 1.5%; }
+.loginbox .tabtop li.right{ margin-left: 1.5%; }
+.loginbox .tabmain{ padding: 30px 0 10px; }
+.loginbox .form-group{ position:relative;margin:10px; }
+.loginbox .form-group.yzm, .loginbox .form-group.sjyzm{ width:63%; }
+.loginbox .form-group label{ position:absolute; left:1px; top:1px; width:46px; padding-top:10px; height:35px; text-align:center; border-right:1px solid #e4e4e4; }
+.loginbox .form-group input.form-control{ height:42px; line-height:100%; line-height/*\**/: 40px\9;background-color:transparent; border:1px solid #e4e4e4;  text-indent:55px; width:100%; }
+.loginbox .form-group input#validCode{}
+.loginbox .form-group.yzm img{ position:absolute; right: -135px; top: -1px; border: 1px solid #e4e4e4; }
+.loginbox .form-group.sjyzm a{ position:absolute; right: -135px; top: -1px; border: 1px solid #dff2ff; display: block; width: 123px; height: 46px; line-height: 46px; text-align: center; background-color: #4fc3a0; color: #fff; }
+.loginbox .form-group label{ height:32px;background:#fff}
+.loginbox .form-group{}
+#loginForm>span{padding:0 10px;}
+.prompt{padding:0 10px;display:none;color:red}
+/* .loginbox .form-group.sjyzm a:hover{ background-color: #377bee; color: #fff; } */
+
+.tabs{ display: none; }
+.tabs.active{ display: block; }
+
+.loginbox .checkbox{ line-height:47px; font-size:14px; color:#ccc; }
+.loginbox .checkbox input{ margin-right:5px; }
+.loginbox .checkbox a{ color:#367cee; float:right; *margin-top: -44px; }
+ .checkbox label{margin-left:10px}
+ .checkbox label input{vertical-align:middle}
+ .checkbox a{margin-right:10px;}
+
+.loginbox .btn{ width:95%; border:0; background-color: #4fc3a0; line-height:48px; border-radius: 6px; color:#fff; font-size:18px; cursor:pointer; margin:10px; }
+
+.loginbox .other{ background: url(../images/login_xz.png) 24px 160px no-repeat; padding-top: 84px; font-size: 14px; line-height: 28px; }
+.loginbox .other center{ margin-left: 120px; margin-right: 50px; border-bottom:1px solid #e4e4e4; line-height: 40px; }
+.loginbox .other ul{ margin-left: 70px; padding: 40px 0 50px; }
+.loginbox .other ul li{ display: inline; }
+.loginbox .other center span{ position: relative; display: block; width: 100px; bottom: -18px; background-color: #fff; }
+.loginbox .other center span a{ color: #367CEE; }
+.footer{ padding: 30px 0 50px; color:#808080; font-size:12px; }
+
+.loginbox .col-12 #registerForm input,.bg{background:#fff;}

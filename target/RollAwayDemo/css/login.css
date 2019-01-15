@@ -1,0 +1,163 @@
+body
+{
+	padding-right: 32px;
+	margin-top: 20px;
+	padding-left: 32px;
+	font-size: 13px;
+	background:url(../images/bgimage.jpg) repeat-x;
+	padding-bottom: 32px;
+	color: #000;
+	padding-top:32px;
+	font-family:verdana,Arial,Helvetica,sans-serif;
+}
+
+#Main
+{
+	border-right: #bbb 1px solid;
+	border-top: #bbb 1px solid;
+	background-color: #FFF;	
+	border-left: #BBB 1px solid;
+	width: 300px;	
+	border-bottom: #BBB 1px solid;
+	text-align:left;
+	padding-left:60px;
+	padding-right:50px;
+	padding-top: 20px;	
+	padding-bottom: 20px;
+}
+
+div#Heading
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	font-weight: bold;
+	font-size: 150%;
+	padding-bottom: 15px;
+	margin: 0px;
+	color: #904;
+	padding-top: 0px;
+	font-family: arial;
+}
+h2
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	font-weight: bold;
+	font-size: 105%;
+	padding-bottom: 0px;
+	margin: 0px 0px 8px;
+	text-transform: uppercase;
+	color: #999;
+	padding-top: 0px;
+	border-bottom: #ddd 1px solid;
+	font-family: "trebuchet ms" , "" lucida grande "" , verdana, arial, sans-serif;
+}
+p
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 6px;
+	margin: 0px;
+	padding-top: 6px;
+}
+a:link
+{
+	color: #002c99;
+	
+	font-size: 12px;
+}
+a:visited
+{
+	color: #002c99;
+	
+	font-size: 12px;
+}
+a:hover
+{
+	color: #cc0066;
+	background-color: #f5f5f5;
+	text-decoration: underline;
+	font-size: 12px;
+}
+.MyLabel
+{
+	display: block;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 6px 0px 2px;
+	text-transform: uppercase;
+	color: #999;
+}
+input.Textbox
+{
+	padding-right: 2px;
+	padding-left: 2px;
+	padding-bottom: 2px;
+	width: 200px;
+	padding-top: 2px;
+	font-family: verdana, arial, sans-serif;
+	height:30px;
+}
+a.Button:link
+{
+	border-right: #999 1px solid;
+	padding-right: 12px;
+	border-top: #999 1px solid;
+	display: block;
+	padding-left: 20px;
+	font-weight: bold;
+	background: #904;
+	padding-bottom: 3px;
+	border-left: #999 1px solid;
+	color: #fff;
+	padding-top: 5px;
+	border-bottom: #999 1px solid;
+	font-size:15px;
+	width:50px;
+	font-family:Verdana;
+}
+a.Button:visited
+{
+	border-right: #999 1px solid;
+	padding-right: 12px;
+	border-top: #999 1px solid;
+	display: block;
+	padding-left: 12px;
+	font-weight: bold;
+	background: #904;
+	padding-bottom: 3px;
+	border-left: #999 1px solid;
+	color: #fff;
+	padding-top: 3px;
+	border-bottom: #999 1px solid;
+	width:60px;
+	font-size:15px;
+}
+span.ErrorMessage
+{
+	display: block;
+	font-weight: bold;
+	color: #904;
+}
+p.Small
+{
+	margin-top: 12px;
+	font-size: 85%;
+}
+
+.Button
+{
+	font-weight: bold;
+	
+	padding-bottom: 3px;
+	
+	color:#904;
+	padding-top: 5px;
+	font-size:14px;
+	width:80px;
+	font-family:Verdana;
+}
+
+a.tip_lnk:link,a.tip_lnk:active,a.tip_lnk:visited{color:Blue;text-decoration:underline;}
+a.top_return{font-weight:normal;padding-left:5px;}
+.line{}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysRoleMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysRole">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ROLE_ID" jdbcType="INTEGER" property="roleId" />
+    <result column="ROLE_CODE" jdbcType="VARCHAR" property="roleCode" />
+    <result column="ROLE_NAME" jdbcType="VARCHAR" property="roleName" />
+    <result column="PARENT_ID" jdbcType="INTEGER" property="parentId" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="CREATETIME" jdbcType="DATE" property="createtime" />
+    <result column="IS_ENABLE" jdbcType="INTEGER" property="isEnable" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,select,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0;width:100%}
+img{border:none; vertical-align:middle;}:focus{outline:0}
+a{color:#666;text-decoration:none}
+a:hover{color:#6FB3E0}
+body{font-size:12px;font-weight:400;line-height:16px;color:#666;font-family:"Hiragino Sans GB","Microsoft YaHei","微软雅黑","宋体",Arial,Verdana,sans-serif;background:#fff;position:relative;-webkit-text-size-adjust:none}
+
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.bc{margin-left:auto;margin-right:auto;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:right;}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block;}
+*html .clearfix{height:1%}
+.Clearfix{display:block;}
+.vm{vertical-align:center;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.abs-right{position:absolute;right:0;}
+.zoom{zoom:1}
+.hidden{visibility:hidden;}
+.hide{display:none;}
+.relative{ position: relative; }
+.absolute{ position: absolute; }
+.fixed{ position: fixed; }
+
+.row{ /*overflow:auto;*/ overflow:hidden; clear:both }
+.col-12{ width:100%; float:left; }
+.col-11{ width:91.6666666666%; float:left; }
+.col-10{ width:83.3333333333%; float:left; }
+.col-9r{ width:75%; float:left; }
+.col-9{ width:78%; float:left; }
+.col-8{ width:66.6666666%; float:left; }
+.col-7{ width:55%; float:left; }
+.col-6{ width:50%; float:left; }
+.col-5{ width:41.6666666%; float:left; }
+.col-4{ width:33.3333333%; float:left; }
+.col-3r{ width:25%; float:left; }
+.col-3{ width:22%; float:left; }
+.col-2{ width:16.666666666%; float:left; }
+.col-1{ width:8.3333333333%; float:left; }
+
+.text-green{ color: #4fc3a0; }
+.text-yellow{ color: #ff9044; }
+.text-blue{ color: #86AFF3; }
+.text-gray{ color: #888; }
+
+
+.manageorgan{
+    width: 492px;
+    height: 50px;
+	font-size:13pt;
+    padding-top:50px;
+    text-align: center;
+}
+.appoint_label{
+	font-size: 12px;color: #666;font-weight: 400;
+}
+.appoint_call{
+	font-size: 14px!important;color: #559d34;padding-bottom: 12px;
+}

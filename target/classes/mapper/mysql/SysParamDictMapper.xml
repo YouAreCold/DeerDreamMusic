@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysParamDictMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysParamDict">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="PARAM_ID" jdbcType="INTEGER" property="paramId" />
+    <result column="METHOD_ID" jdbcType="INTEGER" property="methodId" />
+    <result column="COLUMN_ID" jdbcType="INTEGER" property="columnId" />
+    <result column="SP_VALUE" jdbcType="VARCHAR" property="spValue" />
+    <result column="HIS_VALUE" jdbcType="VARCHAR" property="hisValue" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="IS_ENABLE" jdbcType="INTEGER" property="isEnable" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="CREATEOR" jdbcType="INTEGER" property="createor" />
+  </resultMap>
+</mapper>

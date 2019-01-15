@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysMenuMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysMenu">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="MENU_ID" jdbcType="INTEGER" property="menuId" />
+    <result column="MENU_NAME" jdbcType="VARCHAR" property="menuName" />
+    <result column="PARENT_ID" jdbcType="INTEGER" property="parentId" />
+    <result column="MENU_TYPE" jdbcType="INTEGER" property="menuType" />
+    <result column="ACTION_URL" jdbcType="VARCHAR" property="actionUrl" />
+    <result column="SORT_ORDER" jdbcType="INTEGER" property="sortOrder" />
+    <result column="CREATETIME" jdbcType="VARCHAR" property="createtime" />
+    <result column="IS_ENABLE" jdbcType="INTEGER" property="isEnable" />
+  </resultMap>
+</mapper>

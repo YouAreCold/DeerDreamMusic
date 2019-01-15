@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysMethodMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysMethod">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="METHOD_ID" jdbcType="INTEGER" property="methodId" />
+    <result column="HOSPITAL_ID" jdbcType="INTEGER" property="hospitalId" />
+    <result column="SP_METHOD" jdbcType="VARCHAR" property="spMethod" />
+    <result column="HIS_METHOD" jdbcType="VARCHAR" property="hisMethod" />
+    <result column="METHOD_NAME" jdbcType="VARCHAR" property="methodName" />
+    <result column="TABLE_NAME" jdbcType="VARCHAR" property="tableName" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="CREATEOR" jdbcType="INTEGER" property="createor" />
+    <result column="MODIFYOR" jdbcType="INTEGER" property="modifyor" />
+    <result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="IS_ENABLE" jdbcType="INTEGER" property="isEnable" />
+    <result column="PARAM_IN" jdbcType="LONGVARCHAR" property="paramIn" />
+    <result column="PARAM_OUT" jdbcType="LONGVARCHAR" property="paramOut" />
+    <result column="REMARK" jdbcType="LONGVARCHAR" property="remark" />
+  </resultMap>
+</mapper>

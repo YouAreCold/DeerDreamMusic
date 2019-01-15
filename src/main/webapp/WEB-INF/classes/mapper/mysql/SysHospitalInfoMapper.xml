@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysHospitalInfoMapper">
+	<resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysHospitalInfo">
+		<!-- WARNING - @mbg.generated -->
+		<id column="HOSPITAL_ID" jdbcType="VARCHAR" property="hospitalId" />
+		<result column="HOSPITAL_NAME" jdbcType="VARCHAR" property="hospitalName" />
+		<result column="INVOKING_URL" jdbcType="VARCHAR" property="invokingUrl" />
+		<result column="DRIVE_TRANS_CLASS" jdbcType="VARCHAR" property="driveTransClass" />
+		<result column="STATUS" jdbcType="TINYINT" property="status" />
+		<result column="API_WAY" jdbcType="INTEGER" property="apiWay" />
+		<result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+		<result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+		<result column="HIS_ID" jdbcType="VARCHAR" property="hisId" />
+		<result column="CONTACTS" jdbcType="VARCHAR" property="contacts" />
+		<result column="TELEPHONE" jdbcType="VARCHAR" property="telephone" />
+		<result column="EMAIL" jdbcType="VARCHAR" property="email" />
+		<result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+	</resultMap>
+	<!-- <delete id="deleteBatchBySysHospitalInfoId" parameterType="sysHospitalInfo">
+		DELETE FROM
+		sys_hospital_info
+		WHERE
+		HOSPITAL_ID IN
+		<foreach collection="hospitalIds" item="hospitalId" separator=","
+			open="(" close=")">
+			#{hospitalId}
+		</foreach>
+	</delete> -->
+
+</mapper>

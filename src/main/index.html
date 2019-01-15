@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-1.8.3.js"></script>
+<script type="text/javascript">
+var currentPage =2;  
+var tatalPage = "";  
+var scrollFlag="1";  
+  
+var hght=0;//初始化滚动条总长  
+var top=0;//初始化滚动条的当前位置  
+$(function() {  
+    /*  点击更多  加载更多 */  
+    $("#sea_more").click(  
+        function(){  
+            var brand = document.getElementById("sea_padding1");  
+            brand.style.display=="block"?brand.style.display="none":brand.style.display="block";  
+        });  
+        $(".addClass").qtip({  
+        position : {  
+            my : 'bottom right',  
+            at : 'top center'  
+        },  
+        style : {  
+            classes : 'ui-tooltip-dark ui-tooltip-shadow ui-tooltip-rounded'  
+        }  
+    });  
+          
+  
+//滚动翻页  
+ $(window).bind("scroll",scrollFun);  
+   
+    var top = $('#timeline').offset().top - parseFloat($('#timeline').css('marginTop').replace(/auto/, 0));  
+    var topage = $('#designerPage').offset().top - parseFloat($('#designerPage').css('marginTop').replace(/auto/, 0));  
+      
+    var footTop = $('#dis_footer').offset().top - parseFloat($('#dis_footer').css('marginTop').replace(/auto/, 0));  
+  
+    var maxY = footTop - $('#timeline').outerHeight();  
+    var maxYP = footTop - $('#designerPage').outerHeight();  
+  
+    $(window).scroll(function(evt) {  
+        var y = $(this).scrollTop();  
+        if (y > top) {  
+            if (y < maxY) {  
+                $('#timeline').addClass('fixed').removeAttr('style');  
+            } else {  
+                $('#timeline').removeClass('fixed').css({  
+                    position: 'absolute',  
+                    top: (maxY - top) + 'px'  
+                });  
+            }  
+        } else {  
+            $('#timeline').removeClass('fixed');  
+        }  
+          
+        if(y>topage){  
+            if (y < maxYP) {  
+                $('#designerPage').addClass('fixed').removeAttr('style');  
+            } else {  
+                $('#designerPage').removeClass('fixed').css({  
+                    position: 'absolute',  
+                    top: (maxYP - top) + 'px'  
+                });  
+            }  
+        }else{  
+            $('#designerPage').removeClass('fixed');  
+        }  
+    });  
+   
+});  
+  
+function hrefCurrentPage(obj){  
+    $('html,body').animate({scrollTop:$('#'+obj).offset().top}, 800);  
+}  
+  
+function pageFun(obj,obj1){  
+    var info = $('#'+obj).attr('class');  
+    if(info){  
+        $('html,body').animate({scrollTop:$('#'+obj).offset().top}, 800);  
+    }else{  
+        $(window).unbind();  
+        currentPage = obj1;  
+        ajaxLoadData()  
+        setTimeout('hrefCurrentPage(\"'+obj+'\")',1000);  
+        return;  
+          
+          
+    }  
+}  
+  
+function scrollFun(){  
+     $(window).scrollTop();//这个方法是当前滚动条滚动的距离  
+        $(window).height();//获取当前窗体的高度  
+        $(document).height();//获取当前文档的高度  
+        var bot = 10; //bot是底部距离的高度  
+        if ((bot + $(window).scrollTop()) >= ($(document).height() - $(window).height())) {  
+           //当底部基本距离+滚动的高度〉=文档的高度-窗体的高度时；  
+            //我们需要去异步加载数据，每次执行ajax之前先取消window的scroll事件监听（防止多次请求数据）  
+                $(window).unbind();  
+                existLoad(currentPage);//判断当前页码的数据是否已经被加载,如果没有则往后台请求加载数据  
+                return;  
+        }  
+};  
+function existLoad(obj){  
+    var clazz = $('#'+obj+'0box').attr('class');  
+    console.log(clazz);  
+    if(clazz){//当前这个页码的数据已经存在  
+        currentPage++;  
+        existLoad(currentPage);  
+    }else{  
+        setTimeout('ajaxLoadData()',1000);  
+        return;  
+    }  
+    return false;  
+}  
+function ajaxLoadData(){  
+        $.ajax({type: 'POST',  
+              url: 'ajaxLoadDesigner.xhtml',  
+              data: {"currentPage":currentPage},  
+              success: function(data){  
+                  if(currentPage>=data.page.totalPage){//如果当前页大于等于总页则表示数据全部加载完毕  
+                        currentPage = data.page.totalPage;  
+                        $(window).unbind();//取消window的scroll事件监听（再怎么滚动都不会去后台加载数据了）  
+                        $(".desigenerLoadingMore").html("已经全部加载完毕");  
+                    }else{//如果数据还没有全部加载完毕，设置当前页为服务器端返回的当前页  
+                        currentPage=data.page.currentPage;  
+                        //并且再次为window加上scroll的监听事件  
+                        //（由于之前在ajax请求之前已经取消了对scroll的监听，故而这里需要手动再一次加上）  
+                        $(window).bind("scroll",scrollFun);  
+                    }  
+                ajaxLoadDesignerCall(data);  
+              },  
+              dataType: 'json'  
+         });  
+}  
+  
+function checkedDesigner(obj){  
+    var html= '<div class="seleceedLabel"><p class="selectedLeft"></p>'+  
+        '<p class="selectedText">'+obj+'</p><p class="selectedRight">'+  
+        '<img onClick="removeChecked($(this));" class="cancelChecked" src="../static/images/cancel.png" /></p></div>';  
+    var checkedLabelArray = $(".selectedText");  
+    if(checkedLabelArray<=0){  
+        $("#allSelected").append(html);  
+    }else{  
+        for(var i=0;i<checkedLabelArray.length;i++){//如果已经被选择  
+            if($(checkedLabelArray[i]).text()==obj){  
+                return false;  
+            }  
+        }  
+    }  
+    $("#allSelected").append(html);  
+}  
+  
+function removeChecked(obj){  
+    $(obj).parent().parent().remove();  
+}  
+  
+function ajaxLoadDesignerCall(data,obj){  
+    var list = data.list;  
+    currentPage++;  
+    console.log(currentPage);  
+    var html ="";  
+    if(list.length>0){  
+        for(var i=0;i<list.length;i++){  
+            var gender = "女";  
+            if(list[i].memberGender==1){  
+                gender ="男";  
+            }  
+            html+='<li class="designer_list_details" id='+(currentPage-1)+''+i+'box>'+  
+                '<div class="user-info-banner">'+  
+                '<div class="grid-730 left author-info">'+  
+                '<div class="author-portrait left">'+  
+                '<a href="#" title="" class="author-portrait-container">'+  
+                '<div class="portrait-cover"></div>'+  
+                '<img src="../static/images/'+list[i].memberPic+'" style="float:left" width="115px" height="115px" alt="" style="border:0px;"> </a> </div></div>'+  
+                '<div class="designer_list_details_info">'+  
+                '<p>'+list[i].memberName+'<img title="添加关注" class="addClass" src="../static/images/add.png" /></p>'+  
+                '<p>'+gender+'</p>'+  
+                '<p>粉丝/'+list[i].fans+' &nbsp;作品：80</p></div>'+  
+                '<div class="opus_images_list">'+  
+                '<a href="javascipt:void(0);">'+  
+                '<img src="../static/attachment/1.jpg" width="100" height="75"/></a>'+  
+                '<a href="javascipt:void(0);">'+  
+                '<img src="../static/attachment/1.jpg" width="100" height="75"/></a>'+  
+                '<a href="javascipt:void(0);">'+  
+                '<img src="../static/attachment/1.jpg" width="100" height="75"/></a>'+  
+                '<a href="javascipt:void(0);">'+  
+                '<img src="../static/attachment/1.jpg" width="100" height="75"/></a></div></div></li>';  
+        }  
+        $("#layout_designer_list").append(html);  
+        var timeHtml  = '<li><div class="time">'+Number(((currentPage-2)*10)+1)+'-'+Number(((currentPage-1)*10)+1)+'</div><div class="version">第'+(currentPage-1)+'页</div><div class="number" onclick="hrefCurrentPage(\''+currentPage+'0box\');" info='+(currentPage-1)+'0box></div></li>';  
+        $("#timeline").append(timeHtml);  
+    }else{  
+            $(".desigenerLoadingMore").html("已经全部加载完毕");  
+            $(window).unbind();  
+        }  
+} 
+</script>
+</head>
+<body>
+	
+</body>
+</html>

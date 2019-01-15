@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysDictMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysDict">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="DICT_ID" jdbcType="INTEGER" property="dictId" />
+    <result column="PARENT_ID" jdbcType="INTEGER" property="parentId" />
+    <result column="DICT_NAME" jdbcType="VARCHAR" property="dictName" />
+    <result column="DICT_TYPE" jdbcType="VARCHAR" property="dictType" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="CREATOR" jdbcType="INTEGER" property="creator" />
+    <result column="IS_ENABLE" jdbcType="INTEGER" property="isEnable" />
+  </resultMap>
+</mapper>

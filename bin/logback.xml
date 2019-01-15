@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+
+	<property name="log_dir" value="/roll-log" />
+	<!-- name包必须能够扫描到所以类，包括启动类 -->
+	<!-- 打印sql -->
+	<logger name="com.xky.roll.mapper" level="DEBUG" />
+	<!-- 关闭定时任务的日志 -->
+	<logger name="org.quartz" level="ERROR" />
+	<logger name="com.xky" level="DEBUG" additivity="true"></logger>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-M-d HH:mm:ss} %m%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+	<appender name="myfile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${log_dir}/%d{yyyy-MM-dd}/all-log.log
+			</fileNamePattern>
+			<MaxHistory>10</MaxHistory>
+		</rollingPolicy>
+		<encoder>
+		<!-- 	<pattern>%d{yyyy-M-d HH:mm:ss} %t %p %m%n</pattern> -->
+			<pattern>%d{yyyy-M-d HH:mm:ss} %m%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+	<root level="debug">
+		<appender-ref ref="stdout" />
+		<appender-ref ref="myfile" />
+	</root>
+</configuration>
+

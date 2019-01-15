@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+.main{
+	width: 1200px;
+	margin: 30px auto 0 auto;
+	border:1px solid #cccccc;
+	padding-bottom:26px;
+	margin-bottom:26px;
+}
+.pay_container{
+	width: 610px;
+	margin: 0 auto;
+}
+.pay_info{
+	padding-top: 14px;
+}
+.success{
+	height: 64px;
+	line-height: 64px;
+	text-align:center;
+}
+.success span{
+	color:#50c2a0;
+	font-size:16px;
+	font-weight:bold;
+	position:relative;
+	top:3px;
+	margin-left:12px;
+}
+.pay_content{
+	margin-top:15px;
+	border: 1px solid #4fc3a0;
+	background-color: #f8faf5;
+	padding: 14px 20px 12px 20px;
+}
+.pay_content .title{
+	font-size:14px;
+	color: #4dc3a0;
+	padding: 4px 0;
+}
+.pay_table td{
+	padding: 5px 0;
+}
+.btn_group{
+	margin-top:20px;
+	text-align:center
+}
+.btn_group a{
+	background-color: #4fc3a0;
+	color: #fff;
+	padding: 6px 12px;
+	border-radius: 4px;
+}
+.toUser{
+	margin-left: 10px;
+}

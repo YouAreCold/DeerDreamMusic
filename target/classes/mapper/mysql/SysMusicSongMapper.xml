@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xky.roll.music_service.mapper.SysMusicSongMapper" >
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysMusicSong" >
+    <id column="music_id" property="musicId" jdbcType="VARCHAR" />
+    <result column="music_songName" property="musicSongname" jdbcType="VARCHAR" />
+    <result column="music_url" property="musicUrl" jdbcType="VARCHAR" />
+    <result column="music_singleName" property="musicSinglename" jdbcType="VARCHAR" />
+    <result column="music_platform_id" property="musicPlatformId" jdbcType="VARCHAR" />
+    <result column="music_song_time" property="musicSongTime" jdbcType="VARCHAR" />
+    <result column="music_albumName" property="musicAlbumname" jdbcType="VARCHAR" />
+    <result column="music_albumImage_url" property="musicAlbumimageUrl" jdbcType="VARCHAR" />
+     <result column="music_source" property="musicSource" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

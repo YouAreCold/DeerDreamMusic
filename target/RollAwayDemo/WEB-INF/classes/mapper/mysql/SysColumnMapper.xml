@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysColumnMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysColumn">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="COLUMN_ID" jdbcType="INTEGER" property="columnId" />
+    <result column="HOSPITAL_ID" jdbcType="INTEGER" property="hospitalId" />
+    <result column="METHOD_ID" jdbcType="INTEGER" property="methodId" />
+    <result column="SP_COLUMN" jdbcType="VARCHAR" property="spColumn" />
+    <result column="HIS_COLUMN" jdbcType="VARCHAR" property="hisColumn" />
+    <result column="COLUMN_NAME" jdbcType="VARCHAR" property="columnName" />
+    <result column="ORDER_NUM" jdbcType="INTEGER" property="orderNum" />
+    <result column="PARAM_TYPE" jdbcType="INTEGER" property="paramType" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="CREATOR" jdbcType="INTEGER" property="creator" />
+    <result column="MODIFY_TIME" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="MODIFYOR" jdbcType="INTEGER" property="modifyor" />
+    <result column="IS_ENABLE" jdbcType="INTEGER" property="isEnable" />
+    <result column="DEFAULT_VALUE" jdbcType="VARCHAR" property="defaultValue" />
+    <result column="COLUMN_DESC" jdbcType="LONGVARCHAR" property="columnDesc" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_api.mapper.OrderMapper">
+	<resultMap id="BaseResultMap" type="com.xky.roll.music_api.pojo.Order">
+		<!-- WARNING - @mbg.generated -->
+		<id column="ORDER_NO" jdbcType="NCHAR" property="orderNo" />
+		<result column="REG_DATE" jdbcType="NCHAR" property="regDate" />
+		<result column="REG_BEGTIME" jdbcType="NCHAR" property="regBegtime" />
+		<result column="REG_ENDTIME" jdbcType="NCHAR" property="regEndtime" />
+		<result column="PAY_REG_COST" jdbcType="NUMERIC" property="payRegCost" />
+		<result column="PAY_REG_TIME" jdbcType="NCHAR" property="payRegTime" />
+		<result column="PAY_REG_METHOD" jdbcType="NCHAR" property="payRegMethod" />
+		<result column="PAY_REG_NO" jdbcType="NCHAR" property="payRegNo" />
+		<result column="PAY_REG_STATE" jdbcType="NCHAR" property="payRegState" />
+		<result column="DEPT_ID" jdbcType="NCHAR" property="deptId" />
+		<result column="DEPT_NAME" jdbcType="NCHAR" property="deptName" />
+		<result column="DOCTOR_ID" jdbcType="NCHAR" property="doctorId" />
+		<result column="DOC_NAME" jdbcType="NCHAR" property="docName" />
+		<result column="LEVEL_ID" jdbcType="NCHAR" property="levelId" />
+		<result column="LEVEL_NAME" jdbcType="NCHAR" property="levelName" />
+		<result column="HIS_PAT_ID" jdbcType="NCHAR" property="hisPatId" />
+		<result column="PATIENT_NAME" jdbcType="NCHAR" property="patientName" />
+		<result column="IDENTY_TYPE" jdbcType="NCHAR" property="identyType" />
+		<result column="IDENTY_CODE" jdbcType="NCHAR" property="identyCode" />
+		<result column="BIRTH" jdbcType="NCHAR" property="birth" />
+		<result column="AGE" jdbcType="NCHAR" property="age" />
+		<result column="SEX" jdbcType="NCHAR" property="sex" />
+		<result column="PHONE" jdbcType="NCHAR" property="phone" />
+		<result column="ADDRESS" jdbcType="NCHAR" property="address" />
+		<result column="ORADE_STATE" jdbcType="NCHAR" property="oradeState" />
+		<result column="UPD_TIME" jdbcType="NCHAR" property="updTime" />
+		<result column="CHANNEL_ID" jdbcType="NCHAR" property="channelId" />
+		<result column="XS_UPDATE" jdbcType="NCHAR" property="xsUpdate" />
+		<result column="HIS_DEP_ID" jdbcType="NCHAR" property="hisDepId" />
+		<result column="HIS_DL_DEP_ID" jdbcType="NCHAR" property="hisDlDepId" />
+		<result column="GUARD_NAME" jdbcType="NCHAR" property="guardName" />
+		<result column="GUARD_CARD_NO" jdbcType="NCHAR" property="guardCardNo" />
+		<result column="GUARD_RELATION" jdbcType="NCHAR" property="guardRelation" />
+		<result column="ORDER_ARRIVE_TIME" jdbcType="NCHAR" property="orderArriveTime" />
+		<result column="PAY_ARRIVE_TIME" jdbcType="NCHAR" property="payArriveTime" />
+		<result column="HIS_GET_TIME" jdbcType="NCHAR" property="hisGetTime" />
+		<result column="HIS_GET_STATE" jdbcType="NCHAR" property="hisGetState" />
+	</resultMap>
+</mapper>

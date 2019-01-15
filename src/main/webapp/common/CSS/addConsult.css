@@ -1,0 +1,504 @@
+body,ol,ul,li,h2,h3,h4,p{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: 0;
+}
+.setLcation{
+}
+.setLcation>div{
+	float:left;
+	width: 25%;
+}
+.setLcation:after{
+	content:"";
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
+}
+.setLcation>div:first-child{
+	width: 75%;
+}
+
+
+
+
+/*contentsCss*/
+.contents_title{
+	border-bottom: 1px solid #e4e4e4;
+	width: 100%;
+}
+.contents_title ul{
+	height: 30px;
+	margin-top: 10px;
+
+}
+.contents_title ul h3{
+	float:left;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 20px;
+	font-weight: normal;
+}
+.contents_title ul li:first-child{
+	
+}
+.contents_title ul li{
+	float:left;
+	height: 20px;
+	padding:5px 0;
+}
+.contents_title ul li:hover{
+	border: 1px solid #e4e4e4;
+	border-bottom: 0;
+	background: white;
+	cursor: pointer;
+	color: rgb(79,195,160);
+	margin-left:-1px;
+	margin-right: -1px;
+	
+}
+.contents_title_beOn{
+	border: 1px solid #e4e4e4;
+	border-bottom: 0;
+	background: white;
+	cursor: pointer;
+	color: rgb(79,195,160);
+	margin-left:-1px;
+	margin-right: -1px;
+}
+.contents_title ul li span{
+	border-right: 1px solid #e4e4e4;
+	padding: 0 10px;
+}
+.contents_title ul div span{
+	float: right;
+	font-size: 12px;
+	line-height: 10px;
+	margin-top:10px;
+	color: rgb(79,195,160);
+	border-left: 1px solid #e4e4e4;
+	padding:0 10px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.contents_title ul:after{
+	content:"";
+	width: 0;
+	height: 0;
+	clear: both;
+	display: block;
+}
+
+
+
+
+
+
+
+
+/*****/
+
+.right_title h3{
+	margin: 0 auto;
+	margin-top: 10px;
+	padding: 10px 0 5px 0;
+	width: 90%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 24px;
+	font-weight: normal !important;
+	border-bottom: 1px solid #e4e4e4;
+}
+.right_title span{
+	float: right;
+	font-size: 12px;
+	line-height: 10px;
+	margin-top:20px;
+	color: rgb(79,195,160);
+	border-left: 1px solid #e4e4e4;
+	padding:0 10px;
+	font-weight: normal;
+}
+
+
+
+
+/*****/
+
+
+
+
+
+
+
+/********/
+
+/*consult*/
+
+/*consult������ʾ��ʽ��ʼ��*/
+#consult_contents_contains .aContents{
+	display: none;
+}
+#consult_contents_contains .aContents:first-child{
+	display: block;
+}
+
+/*problem����*/
+.consult_problems ol li{
+	display: none;
+}
+.consult_problems ol li:first-child{
+	display: block;
+}
+/**/
+
+#consult{
+	margin:20px 0;
+}
+#consult_contains{
+	
+}
+#consult_contains .title{
+	font-size:24px;
+	font-weight:400;
+	color:black;
+}
+#consult_contains .title span{
+	font-size:14px;
+	color:rgb(188,188,194);
+	margin-left: 10px;
+}
+#consult_contains .title img{
+	margin-right:16px;
+}
+#consult_contains .title a{
+	float:right;
+	height:30px;
+	line-height:40px;
+	padding-right:5px;
+}
+#consult_contains .title a span{
+	color:rgb(79,195,168);
+}
+#consult_contents{
+	margin-top:5px;
+	padding: 10px;
+	border:1px solid #e4e4e4;
+
+}
+#consult_contents_contains .aContents{
+	display: none;
+}
+#consult_contents_contains .aContents:first-child{
+	display: block;
+}
+
+.consult_contents_containsCss{
+	text-align: center;
+	padding-left:2%; 
+
+
+}
+.consult_contents_containsCss>li{
+	width: 23%;
+	float: left;
+	margin: 1% 0;
+	margin-right: 2%;
+	margin-left: -2px;
+	height: 248px;
+	border:1px solid #e4e4e4;
+
+}
+.consult_contents_containsCss>li:hover{
+	border-bottom:1px solid rgb(79,195,160);
+
+}
+.consult_contents_containsCss>li a{
+	
+}
+.consult_contents_containsCss>li a img{
+	margin-top:10px;
+	width: 70px;
+	height: 70px;
+	background: #e4e4e4;
+	border: 0;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+
+}
+.consult_contents_containsCss>li div ul li span{
+	display: block;
+}
+.consult_contents_containsCss>li div ul{
+	margin-top: 10px;
+	width: 90%;
+	border-bottom: 1px dotted #e4e4e4;
+	margin: 0 auto;
+}
+.consult_contents_containsCss>li div ul li{
+	padding: 2px 0;
+	color: #888;
+	font-size: 14px;
+}
+.consult_contents_containsCss>li div ul li strong{
+	color: rgb(12,169,160);
+}
+.consult_contents_containsCss>li div ul a{
+	transition:1s;
+	color:black;
+	font-size: 14px;
+}
+.consult_contents_containsCss>li div ul a:hover{
+	color: rgb(79,195,160);
+
+}
+.consult_contents_containsCss>li p{
+	width: 90%;
+	margin: 0 auto;
+	padding: 5px 0;
+	border-bottom: 1px dotted #e4e4e4;
+	overflow: hidden;
+	height: 40px;
+	text-overflow:ellipsis;
+	font-size: 12px;
+	color:#888;
+}
+.consult_contents_containsCss>div span{
+	float: right;
+	font-size: 12px;
+	line-height: 10px;
+	margin-top:10px;
+	color: rgb(79,195,160);
+	border-left: 1px solid #e4e4e4;
+	padding:0 10px;
+	font-weight: normal;
+	cursor: pointer;
+}
+.consult_contents_containsCss>div:after{
+	content: "";
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
+}
+.consult_contents_containsCss:after{
+	content: "";
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
+}
+.consult_problems{
+	padding: 10px 20px;
+	margin: 20px 0;
+	border-top: 1px dotted #e4e4e4;
+}
+.consult_problems .problem_icon{
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin:5px;
+}
+.consult_problems ol{
+	border-bottom: 1px dotted #e4e4e4;
+}
+.consult_problems li{
+	
+	margin: 5px 0;
+}
+.consult_problems li>p{
+	margin-left: 50px;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+}
+.consult_problems li>p span{
+	display: inline-block;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	color:#666;
+}
+.consult_problems li>p .problem_content{
+	width: 74%;
+}
+.consult_problems li>p .problem_time{
+	width: 25%;
+	text-align: right;
+}
+
+.consult_problems .answer_icon{
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin:5px;
+}
+.answer_contains{
+	margin-left: 50px;
+	background:#e4e4e4;
+	padding: 10px;
+}
+.answer_contains .answer_doc_img{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	float: left;
+}
+.answer_contains>div{
+	margin-left: 45px;
+	font-size: 14px;
+}
+.answer_contains div span{
+	display: block;
+	color: #888;
+}
+.answer_contains div span strong{
+	margin-right:5px;
+	color: black;
+}
+.answer_contains div p{
+	/* text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap; */
+}
+.answer_contains div p span{
+	color:rgb(79,195,160);
+	display: inline-block;
+	font-size: 14px;
+}
+
+
+
+#consult_right{
+	border: 1px solid #e4e4e4;
+	width: 23%;
+	margin-left:1%;
+	
+}
+#doctitle{
+	margin-top: 10px;
+	padding: 10px 20px 5px 20px;
+	border-bottom: 1px solid #e4e4e4;
+}
+#doctitle h3{
+	font-size:20px;
+	padding:5px 0;
+}
+#doctitle span{
+	float: right;
+	font-size: 12px;
+	line-height: 10px;
+	margin-top:10px;
+	color: rgb(79,195,160);
+	border-left: 1px solid #e4e4e4;
+	padding:0 10px;
+	font-weight: normal;
+}
+
+#doc_content>ul>li{
+}
+#doc_content li a{
+	height: 130px;	
+	padding:8px 20px;
+	display: block;
+}
+#doc_content>ul>li:hover{
+	background: #e4e4e4;
+}
+#doc_content>ul>li:first-child{
+	border-bottom: 1px solid #e4e4e4;
+
+}
+.doc_img{
+	width:70px;
+	height:70px;
+	float:left;
+}
+.doc_img img{
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	width:100%;
+	height:100%;
+	background:gray;
+	border:0;
+}
+.doc_img_content{
+	float:left;
+	width:130px;
+	padding-left:10px; 
+}
+.doc_img_content li{
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	padding:2px;
+}
+.doc_img_content li span{
+	font-size: 12px;
+	display: block;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+
+}
+.doc_img_content li input{
+	/*background: rgb(79,195,160);*/
+}
+.doc_diseaserequire{
+	margin-top: 5px;
+	height: 40px;
+	font-size:14px;
+	color:rgb(188,188,194);
+
+}
+.doc_diseaserequire span{
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size:16px;
+	font-weight: bold;
+	color:black ;
+
+}
+#consult_right .box{
+	margin:0;
+}
+#consult_right .doctor:first-child{
+	border:0;
+}
+#consult_right .doctor{
+	border:0;
+	border-top:1px solid #e4e4e4;
+}
+#consult_right .skill{
+	padding:5px 20px 10px 20px;
+}
+#consult_right .box .title span{
+	font-size:24px;
+	color:black;
+}
+#consult_right .doctor{
+	width:100% !important;
+}
+
+
+/*************/
+h2.title>span{
+	font-size:100% !important;
+	margin-left:10px;
+	font-weight:400;
+	color:#666 !important;
+}
+

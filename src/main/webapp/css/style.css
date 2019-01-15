@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+  *{margin:0px;padding:0px;}
+  body{font-family:"微软雅黑";}
+  #contain{text-align:center;width:100%;height:100%;}
+  #top{width:100%;height:60px;line-height:60px;font-size:20px;}
+  #main{width:100%;height:678px;text-align:center;font-size:18px;}
+  #main table{width:100%px;height:678px;}
+  #main table th{color:white;}
+  #main table tr{width:100%px;height:26px;line-height:26px;font-weight:bold;}
+  .head0{width:4%;}
+  .head1{width:14%;}
+  .head2{width:64%;}
+  .head3{width:4%;}
+  #main table textarea{font-size:14px;font-weight:bold;}
+  #footer{width:100%;height:40px;line-height:40px;}
+  a{text-decoration:none;}
+  input{width:998px;height:18px;line-height:18px;font-size:18px;}
+  
+  /*tz_dialog start*/
+.xky_dialog{width:272px;height:166px;box-shadow: 0px 0px 5px 0px #000;position:absolute;left:0;top:0;z-index:9999;}
+.xky_dialog .t_title{width:242px;height:21px;background:#119da9;padding: 10px 15px;cursor: move;}
+.xky_dialog .t_title .t_h3{font-size:14px;color:#fff;font-weight:bold;float:left;}
+.xky_dialog .t_title .t_close{float:right;color:#fff;text-decoration:none;}
+.xky_dialog .t_content{width:272px;height:125px;background:#EEF3FA;}
+.xky_dialog .t_content .t_message{padding: 18px 40px;}
+.xky_dialog .t_content .t_message .t_clear{clear:both;}
+.xky_dialog .t_content .t_message .t_icon{width:44px;height:38px;display:block;background:url("../images/dialog.png") no-repeat -149px -3px;float:left;}
+.xky_dialog .t_content .t_message .t_con{float:left;padding: 10px 20px;}
+.xky_dialog .t_content .t_btn{text-align:center;}
+.xky_dialog .t_content .t_btn input{width:70px;height:26px;line-height:26px;border:1px solid #119da9;padding:0px 0px;font-size:14px;font-family:"微软雅黑";background:#fff;cursor: pointer;}
+.xky_dialog .t_content .t_btn input:hover{background:#EAEAEA;outline:none;}
+/*end tz_dialog*/
+
+/*tz_yy start*/
+.tz_yy{width:100%;height:100%;background:#000;position:fixed;top:0;left:0;
+opacity:0.5;filter:alpha(opacity=50);}
+/*end tz_yy*/
+
+/**排序样式 start**/
+.sortDesc{width:0px;height:0px;border-bottom:10px solid;display:inline-block;
+          border-right:10px solid transparent;
+          border-left:10px solid transparent;}
+.sortAsc{width:0px;height:0px;border-top:10px solid;display:inline-block;
+          border-right:10px solid transparent;
+          border-left:10px solid transparent;}
+/**排序样式 end**/

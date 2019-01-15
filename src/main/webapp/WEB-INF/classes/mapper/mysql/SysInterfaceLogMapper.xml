@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysInterfaceLogMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysInterfaceLog">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="logid" jdbcType="INTEGER" property="logid" />
+    <result column="sortnum" jdbcType="INTEGER" property="sortnum" />
+    <result column="calltime" jdbcType="VARCHAR" property="calltime" />
+    <result column="returntime" jdbcType="VARCHAR" property="returntime" />
+    <result column="methodname" jdbcType="VARCHAR" property="methodname" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="inparam" jdbcType="LONGVARCHAR" property="inparam" />
+    <result column="errormsg" jdbcType="LONGVARCHAR" property="errormsg" />
+    <result column="returnmsg" jdbcType="LONGVARCHAR" property="returnmsg" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysUserMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="USER_ID" jdbcType="INTEGER" property="userId" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="PWD" jdbcType="VARCHAR" property="pwd" />
+    <result column="LAST_LOGIN_TIME" jdbcType="DATE" property="lastLoginTime" />
+    <result column="LOGIN_TIME" jdbcType="DATE" property="loginTime" />
+    <result column="LOGOUT_TIME" jdbcType="DATE" property="logoutTime" />
+    <result column="CREATETIME" jdbcType="DATE" property="createtime" />
+    <result column="IS_ENABLE" jdbcType="INTEGER" property="isEnable" />
+    <result column="USER_KEY" jdbcType="VARCHAR" property="userKey" />
+  </resultMap>
+</mapper>

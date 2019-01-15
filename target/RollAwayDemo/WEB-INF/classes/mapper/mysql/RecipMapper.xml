@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.RecipeMapper">
+  <resultMap id="Recipepojo" type="com.xky.roll.music_service.pojo.Recipepojo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="patientId" jdbcType="VARCHAR" property="patientId" />
+    <result column="messageId" jdbcType="VARCHAR" property="messageId" />
+     <result column="age" jdbcType="VARCHAR" property="age" />
+    <result column="cardNO" jdbcType="VARCHAR" property="cardNO" />
+    <result column="patientName" jdbcType="VARCHAR" property="patientName" />
+    <result column="idcard" jdbcType="VARCHAR" property="idcard" />
+    <result column="birth" jdbcType="VARCHAR" property="birth" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="ismzpatient" jdbcType="VARCHAR" property="ismzpatient" />
+    <result column="depId" jdbcType="VARCHAR" property="depId" />
+    <result column="depName" jdbcType="VARCHAR" property="depName" />
+    <result column="docId" jdbcType="VARCHAR" property="docId" />
+    <result column="jzcount" jdbcType="VARCHAR" property="jzcount" />
+    <result column="jzcount" jdbcType="VARCHAR" property="jzcount" />
+    <result column="hisorder" jdbcType="VARCHAR" property="hisorder" />
+    <result column="recipeTime" jdbcType="VARCHAR" property="recipeTime" />
+    <result column="orderControl" jdbcType="VARCHAR" property="orderControl" />
+    <result column="recipeId" jdbcType="VARCHAR" property="recipeId" />
+    <result column="recipegroupId" jdbcType="VARCHAR" property="recipegroupId" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="jl" jdbcType="VARCHAR" property="jl" />
+    <result column="jlunits" jdbcType="VARCHAR" property="jlunits" />
+    <result column="pl" jdbcType="VARCHAR" property="pl" />
+    <result column="ts" jdbcType="VARCHAR" property="ts" />
+    <result column="cs" jdbcType="VARCHAR" property="cs" />
+    <result column="czybm" jdbcType="VARCHAR" property="czybm" />
+    <result column="llkdbm" jdbcType="VARCHAR" property="llkdbm" />
+    <result column="hzkdbm" jdbcType="VARCHAR" property="hzkdbm" />
+    <result column="ypbm" jdbcType="VARCHAR" property="ypbm" />
+    <result column="cflb" jdbcType="VARCHAR" property="cflb" />
+    <result column="yl" jdbcType="VARCHAR" property="yl" />
+    <result column="ylunits" jdbcType="VARCHAR" property="ylunits" />
+    <result column="ylunit" jdbcType="VARCHAR" property="ylunit" />
+    <result column="yfbm" jdbcType="VARCHAR" property="yfbm" />
+    <result column="gyfsbm" jdbcType="VARCHAR" property="gyfsbm" />
+    <result column="amount" jdbcType="VARCHAR" property="amount" />
+  </resultMap>
+</mapper>

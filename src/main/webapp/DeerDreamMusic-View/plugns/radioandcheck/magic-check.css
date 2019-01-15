@@ -1,0 +1,181 @@
+@keyframes hover-color {
+	from {
+		border-color: #c0c0c0;
+	}
+	to {
+		border-color: #81D8CF;
+	}
+}
+
+.magic-radio,
+.magic-checkbox {
+	position: absolute;
+	display: none;
+}
+
+.magic-radio[disabled],
+.magic-checkbox[disabled] {
+	cursor: not-allowed;
+}
+
+.magic-radio+label,
+.magic-checkbox+label {
+	position: relative;
+	padding-left: 18px;
+	/*单选框与文字的距离*/
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.magic-radio+label:hover:before,
+.magic-checkbox+label:hover:before {
+	animation-duration: 0.4s;
+	animation-fill-mode: both;
+	animation-name: hover-color;
+}
+
+.magic-radio+label:before,
+.magic-checkbox+label:before {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	content: '';
+	border: 2px solid #c0c0c0;
+}
+
+.magic-radio+label:after,
+.magic-checkbox+label:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+.magic-radio[disabled]+label,
+.magic-checkbox[disabled]+label {
+	cursor: not-allowed;
+	color: #e4e4e4;
+}
+
+.magic-radio[disabled]+label:hover,
+.magic-radio[disabled]+label:before,
+.magic-radio[disabled]+label:after,
+.magic-checkbox[disabled]+label:hover,
+.magic-checkbox[disabled]+label:before,
+.magic-checkbox[disabled]+label:after {
+	cursor: not-allowed;
+}
+
+.magic-radio[disabled]+label:hover:before,
+.magic-checkbox[disabled]+label:hover:before {
+	border: 2px solid #e4e4e4;
+	animation-name: none;
+}
+
+.magic-radio[disabled]+label:before,
+.magic-checkbox[disabled]+label:before {
+	border-color: #e4e4e4;
+}
+
+.magic-radio:checked+label:before,
+.magic-checkbox:checked+label:before {
+	animation-name: none;
+}
+
+.magic-radio:checked+label:after,
+.magic-checkbox:checked+label:after {
+	display: block;
+}
+
+.magic-radio+label:before {
+	border-radius: 50%;
+}
+
+
+/* 单选框小圆点位置  */
+
+.magic-radio+label:after {
+	top: 5px;
+	/*位置调节*/
+	left: 5px;
+	width: 6px;
+	/*大小调节*/
+	height: 6px;
+	border-radius: 50%;
+	/*形状调节*/
+	background: #81D8CF;
+}
+
+.magic-radio:checked+label:before {
+	border: 2px solid #81D8CF;
+}
+
+.magic-radio:checked[disabled]+label:before {
+	border: 2px solid #c9e2f9;
+}
+
+.magic-radio:checked[disabled]+label:after {
+	background: #c9e2f9;
+}
+
+.magic-checkbox+label:before {
+	border-radius: 2px;
+}
+
+.magic-checkbox+label:after {
+	top: 2px;
+	left: 7px;
+	box-sizing: border-box;
+	width: 6px;
+	height: 12px;
+	transform: rotate(45deg);
+	border-width: 2px;
+	border-style: solid;
+	border-color: #fff;
+	border-top: 0;
+	border-left: 0;
+}
+
+.magic-checkbox:checked+label:before {
+	border: #81D8CF;
+	background: #81D8CF;
+}
+
+.magic-checkbox:checked[disabled]+label:before {
+	border: #c9e2f9;
+	background: #c9e2f9;
+}
+
+/* 输入框优化 */
+input {
+	 height: 36px;
+    width: 80%;
+    border: 1px solid #CCC;
+	padding: 5px 0px;
+	padding-right: 1px;
+}
+
+input:focus {
+	border-color: #CCC;
+	outline: 0;
+	/*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)*/
+}
+/*按钮*/
+.magic-button { /* 按钮美化 */  
+    width: 270px; /* 宽度 */  
+    height: 40px; /* 高度 */  
+    border-width: 0px; /* 边框宽度 */  
+   /* border-radius: 3px;*/ /* 边框半径 */  
+    background:#31C27C; /* 背景颜色 */  
+    cursor:default; /*鼠标移入按钮范围时出现手势 */  
+    outline: none; /* 不显示轮廓线 */  
+    font-family: Microsoft YaHei; /* 设置字体 */  
+    color: white; /* 字体颜色 */  
+    font-size: 17px; /* 字体大小 */  
+}  
+.magic-button:hover { /* 鼠标移入按钮范围时改变颜色 */  
+    background: #2DB06E;  
+}  

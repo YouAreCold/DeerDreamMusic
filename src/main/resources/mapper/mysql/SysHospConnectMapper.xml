@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.SysHospConnectMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.SysHospConnect">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="CONNECT_ID" jdbcType="INTEGER" property="connectId" />
+    <result column="HOSPITAL_ID" jdbcType="INTEGER" property="hospitalId" />
+    <result column="METHOD_ID" jdbcType="INTEGER" property="methodId" />
+    <result column="COMM_METHOD" jdbcType="VARCHAR" property="commMethod" />
+    <result column="CONNECT_TYPE" jdbcType="INTEGER" property="connectType" />
+    <result column="JDBC_DRIVER" jdbcType="VARCHAR" property="jdbcDriver" />
+    <result column="CONNECT_URL" jdbcType="VARCHAR" property="connectUrl" />
+    <result column="CID" jdbcType="VARCHAR" property="cid" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="IS_ENABLE" jdbcType="INTEGER" property="isEnable" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="CREATOR_ID" jdbcType="INTEGER" property="creatorId" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+</mapper>

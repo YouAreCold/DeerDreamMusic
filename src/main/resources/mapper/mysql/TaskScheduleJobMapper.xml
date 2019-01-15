@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.TaskScheduleJobMapper">
+	<resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.TaskScheduleJob">
+		<!-- WARNING - @mbg.generated -->
+		<id column="job_id" jdbcType="INTEGER" property="jobId" />
+		<result column="job_name" jdbcType="VARCHAR" property="jobName" />
+		<result column="job_group" jdbcType="VARCHAR" property="jobGroup" />
+		<result column="cron_expression" jdbcType="VARCHAR" property="cronExpression" />
+		<result column="bean_class" jdbcType="VARCHAR" property="beanClass" />
+		<result column="method_name" jdbcType="VARCHAR" property="methodName" />
+		<result column="params" jdbcType="VARCHAR" property="params" />
+		<result column="job_status" jdbcType="TINYINT" property="jobStatus" />
+		<result column="last_time" jdbcType="TIMESTAMP" property="lastTime" />
+		<result column="next_time" jdbcType="TIMESTAMP" property="nextTime" />
+		<result column="description" jdbcType="VARCHAR" property="description" />
+		<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+		<result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+	</resultMap>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xky.roll.music_service.mapper.BizPayorderdtlMapper">
+  <resultMap id="BaseResultMap" type="com.xky.roll.music_service.pojo.BizPayorderdtl">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="dtlID" jdbcType="VARCHAR" property="dtlid" />
+    <result column="itemFee" jdbcType="VARCHAR" property="itemfee" />
+    <result column="itemName" jdbcType="VARCHAR" property="itemname" />
+    <result column="itemSpec" jdbcType="VARCHAR" property="itemspec" />
+    <result column="itemCount" jdbcType="VARCHAR" property="itemcount" />
+    <result column="itemUnit" jdbcType="VARCHAR" property="itemunit" />
+    <result column="itemAmount" jdbcType="VARCHAR" property="itemamount" />
+    <result column="itemPrice" jdbcType="VARCHAR" property="itemprice" />
+    <result column="hospitalId" jdbcType="VARCHAR" property="hospitalid" />
+    <result column="paitId" jdbcType="VARCHAR" property="paitid" />
+    <result column="regiNum" jdbcType="VARCHAR" property="reginum" />
+    <result column="reciNum" jdbcType="VARCHAR" property="recinum" />
+  </resultMap>
+</mapper>

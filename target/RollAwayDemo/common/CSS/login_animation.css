@@ -1,0 +1,23 @@
+@keyframes mymove
+{
+from {top:0px;}
+to {top:150px;}
+}
+
+@-moz-keyframes mymove /* Firefox */
+{
+from {top:0px;}
+to {top:150px;}
+}
+
+@-webkit-keyframes mymove /* Safari 和 Chrome */
+{
+from {top:0px;}
+to {top:150px;}
+}
+
+@-o-keyframes mymove /* Opera */
+{
+from {top:0px;}
+to {top:150px;}
+}
