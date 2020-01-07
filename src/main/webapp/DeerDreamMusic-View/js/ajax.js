@@ -18,7 +18,7 @@ function ajaxSearch() {
     
     $.ajax({
         type: mkPlayer.method,
-        url: 'http://192.168.0.105:8089/DeerDreamMusic/musicapi/queryMusicAndName',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicapi/queryMusicAndName',
         data: {
 		"keywork": rem.wd,					// 关键字
 		"page": rem.loadPage,				// 页码
@@ -130,7 +130,7 @@ function ajaxUrl(music, callback)
     
     $.ajax({ 
         type: mkPlayer.method,
-        url: 'http://192.168.0.105:8089/DeerDreamMusic/musicapi/queryInfo',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicapi/queryInfo',
         data: {
 		"musicId": music.id,  			// 音乐ID
 		"source" : music.source  			// 平台标识
@@ -186,7 +186,7 @@ function ajaxPic(music, callback)
     
     $.ajax({ 
         type: mkPlayer.method,
-        url: 'http://192.168.0.105:8089/DeerDreamMusic/musicapi/queryInfo',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicapi/queryInfo',
         data: {
 		"musicId": music.pic_id,  			// 音乐ID
 		"source" : music.source  				// 平台标识
@@ -237,7 +237,7 @@ function ajaxPlayList(lid, id, callback) {
     
     $.ajax({
         type: mkPlayer.method, 
-        url: 'http://192.168.0.105:8089/DeerDreamMusic/musicapi/queryUserInfoPlayList',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicapi/queryUserInfoPlayList',
         data:{
 			"pId": lid,  			// 音乐ID
 			"source" : '0002'  			// 平台标识
@@ -337,7 +337,7 @@ function ajaxLyric(music, callback) {
     
     $.ajax({
         type: mkPlayer.method,
-        url: 'http://192.168.0.105:8089/DeerDreamMusic/musicapi/queryInfo',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicapi/queryInfo',
         data: {
 		"musicId": music.lyric_id,				// 音乐ID
 		"source":music.source  					// 平台标识
@@ -378,7 +378,7 @@ function ajaxUserList(uid)
     var tmpLoading = layer.msg('服务器正在吃鸡...', {icon: 16,shade: 0.01});
     $.ajax({
         type: mkPlayer.method,
-        url: 'http://192.168.0.105:8089/DeerDreamMusic/musicapi/queryUserInfo',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicapi/queryUserInfo',
         data: {
 			"userId": uid,  			// 音乐ID
 			"source" : '0002'  			// 平台标识

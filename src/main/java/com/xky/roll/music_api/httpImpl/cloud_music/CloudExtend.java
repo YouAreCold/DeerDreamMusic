@@ -10,7 +10,7 @@ import com.xky.roll.music_api.util.IdGenerator.IdGeneratorUtil;
 import com.xky.roll.music_api.util.http.HttpUtil;
 
 /**
- * 网易云 api实现类(未开发)
+ * 网易云 api实现类
  * 
  * @author wjx
  *

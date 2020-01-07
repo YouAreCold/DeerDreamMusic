@@ -11,7 +11,7 @@ import com.xky.roll.music_api.util.http.HttpUtil;
 import com.xky.roll.music_service.util.DateUtil;
 
 /**
- * 网易云 api实现类(未开发)
+ * 网易云 api实现类
  * 
  * @author wjx
  *

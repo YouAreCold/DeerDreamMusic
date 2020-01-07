@@ -14,8 +14,9 @@ tasks.withType(JavaCompile) {
 }
 
 //download path
+//配置jar仓库地址
 repositories {
-     maven { url "http://repo.maven.apache.org/maven2" }
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
 }
 
 // jar 
@@ -30,7 +31,7 @@ dependencies {
 	// mybatis jar  end
     
     // mysql jar
-    compile group: 'mysql', name: 'mysql-connector-java', version:'5.1.41'
+    compile group: 'mysql', name: 'mysql-connector-java', version:'8.0.13'
     
     // alibaba druid jar
     compile group: 'com.alibaba', name: 'druid', version:'1.0.29'

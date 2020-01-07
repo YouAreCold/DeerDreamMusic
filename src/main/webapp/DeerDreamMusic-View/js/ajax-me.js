@@ -18,7 +18,7 @@ function ajaxSearch() {
     
     $.ajax({
         type: mkPlayer.method,
-        url: 'http://127.0.0.1:8089/DeerDreamMusic/musicmanager/queryMusicAndName',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicmanager/queryMusicAndName',
         data: {
 		"keywork": rem.wd,				// 关键字
 		"page": rem.loadPage,			// 页码
@@ -150,7 +150,7 @@ function ajaxUrl(music, callback)
     
     $.ajax({ 
         type: mkPlayer.method,
-        url: 'http://127.0.0.1:8089/DeerDreamMusic/musicmanager/queryMusicInfo',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicmanager/queryMusicInfo',
         data: {
 		"musicId": music.id  			// 音乐ID
 		//rem.source  // 平台标识
@@ -206,7 +206,7 @@ function ajaxPic(music, callback)
     
     $.ajax({ 
         type: mkPlayer.method,
-        url: 'http://127.0.0.1:8089/DeerDreamMusic/musicmanager/queryMusicInfo',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicmanager/queryMusicInfo',
         data: {
 		"musicId": music.pic_id  			// 音乐ID
 		//rem.source  // 平台标识
@@ -350,7 +350,7 @@ function ajaxLyric(music, callback) {
     
     $.ajax({
         type: mkPlayer.method,
-        url: 'http://127.0.0.1:8089/DeerDreamMusic/musicmanager/queryMusicInfo',
+        url: 'http://192.168.1.180:8089/DeerDreamMusic/musicmanager/queryMusicInfo',
         data: {
 		"musicId": music.lyric_id				// 音乐ID
 		//rem.source  // 平台标识
